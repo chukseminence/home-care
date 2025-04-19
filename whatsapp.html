@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsapp-popup</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-shadow: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #444;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #34a8f0;
+    }
+
+    .container{
+        display: none;
+        background-color: white;
+        border-radius: 5px;
+        padding: 30px;
+        width: 450px;
+
+    }
+
+    .container p{
+        margin: 20px 0;
+    }
+
+    form div{
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    span{
+        margin: 1rem;
+        
+    }
+
+
+    span input{
+        width: 100%;
+        padding: 10px;
+        margin: 5px 4px 20px 0;
+        background-color: #eee;
+        border: none;
+        outline: none;
+        
+    }
+
+    textarea{
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        background-color: #eee;
+        border:none ;
+        outline: none;
+    }
+
+    button{
+        background-color: #e53653;
+        padding: 10px 30px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        margin-top: 20px;
+    }
+
+    button:hover{
+        background-color: #a20d26;
+        cursor: pointer;
+    }
+
+    .whatsapp_float{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+</style>
+<script>
+function sendToWhatsapp(){
+    let number = "+2347055922557";
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+      let text = document.getElementById('text').value;
+    let message = document.getElementById('message').value;
+     
+
+
+    var url = "https://wa.me/" + number + "?text="
+    + "Name : " +name+ "%0a"
+    + "Email : " +email+ "%0a"
+    + "Whatsapp-number : " +text+ "%0a"
+    + "Message : " +message+ "%0a"
+
+    window.open(url, '_blank').focus();
+
+
+     const btn = document.getElementById("btn");
+               const container = document.querySelector("form");
+
+               btn.onclick = () => {
+                container.classList.toggle("active");
+               }
+}
+</script>
+<body>
+
+    <div class="conta" id="btn" onclick="toggleNavber()" >
+
+
+           <div class="whatsapp_float"  >
+            <a href="#" ><img src="/images/whatsapp-image.png" width="80px" class="whatsapp_float_btn" alt=""></a>
+           </div>
+           </div>
+
+    <div class="container ">
+        <div class="ul">
+        <h2>Contact   Us</h2>
+        <p>Leave your messages and we will get back to you</p>
+        <form action="" >
+            <div>
+                <span>
+                    <label for="name">Name</label><br>
+                    <input id="name" type="text" placeholder="Full Name">
+                </span>
+                <span>
+                    <label for="email">Email</label><br>
+                    <input id="email" type="email" placeholder="email">
+                </span><br>
+                <span class="last-child">
+                    <label for="text">Whatsapp</label><br>
+                    <input id="text" type="text" placeholder="Whatsapp number">
+                </span>
+                <br>
+                <br>
+                
+            </div>
+            <label for="message">Your Message</label><br>
+            <textarea name="" id="message" rows="10" placeholder="Enter you message"></textarea>
+            <button >Submit</button>
+        </form>
+
+        </div>
+
+        
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cloth .more{
+    color: #fff;
+}
+
+
+
+.wraper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: -6.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain{
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card{
+    width: 90px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.3, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card > .row{
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+ .longer-life{
+	margin: auto;
+	text-align: center;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+	
+ }
+
+  .more{
+	color: #000;
+	margin-top: 1rem;
+	font-size: 30px;
+	
+ }
+
+  .longer{
+	color: #14BFC9;
+	
+ }
+
+
+
+
+
+.card > .row > .icon{
+    background: #14BFC9;
+    color: black;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description{
+
+    color: white;
+    background-color: #e0dada;
+    background-image: radial-gradient( #5c0067 0%, #00d4ff 100%);
+    border-radius: 5rem;
+    margin-left: -0.5rem;
+    margin-bottom: 0.2rem;
+    border:1px solid red;
+    
+}
+
+
+.description p{
+    color: #e0dada;
+    padding-top: 5px;
+    margin-top: -0.1rem;
+    margin-left: 2rem;
+    
+
+}
+
+.description h4{
+    text-transform: uppercase;
+    margin-left: 2rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    width: 600px;
+}
+
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"]{
+    background-image: url(/images/custormer-1.jpg);
+}
+
+.card[for="c2"]{
+    background-image: url(/images/user5.jpg);
+}
+
+.card[for="c3"]{
+    background-image: url(/images/profile\ 5.jpeg);
+}
+
+.card[for="c4"]{
+    background-image: url(/images/custormer-2.jpg);
+    
+    background-position:center;
+}
+
+@media(max-width:700px){
+   .wraper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain{
+    width:300px ;
+    height: 400px;
+    display: flex;
+    margin-left: -5rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card{
+    width: 100px;
+    height: 700px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.3, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.description{
+    display: inline-block;
+    
+    border-radius: 5rem;
+    margin-left: -0.5rem;
+    margin-bottom: 2rem;
+    margin-top: -3rem;
+    border:1px solid red;
+    
+    
+}
+
+
+
+.card > .row{
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height:0px;
+    width: 0px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+
+input:checked + label{
+    width: 400px;
+    height: 5000px;
+}
+
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+}
+
