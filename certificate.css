@@ -91,7 +91,7 @@ ul li:hover ul.dropdown{
     top: 15px;
     width: 18px;
     height: 18px;
-    background: url(/arrow_drop_down_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png);
+    background: url(./arrow_drop_down_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png);
 }
 
 .collapsable input:checked + label:after{
